@@ -18,7 +18,7 @@ public class AsyncRestTemplateTest {
 
     public static void main(String[] args) {
         AsyncRestTemplate asyncRestTemplate = new AsyncRestTemplate();
-        ListenableFuture<ResponseEntity<Person>> futureEntity = asyncRestTemplate.getForEntity("http://localhost:8080/spring4-java8-demo/person/{id}", Person.class, 1);
+        ListenableFuture<ResponseEntity<Person>> futureEntity = asyncRestTemplate.getForEntity("http://0.0.0.0:8080/spring4-java8-demo/person/{id}", Person.class, 1);
 
         futureEntity.addCallback(new ListenableFutureCallback<ResponseEntity<Person>>() {
             @Override
