@@ -25,7 +25,7 @@ public class JmsConfig {
 
     private static final int LIMIT_IN_MB = 1024 * 1024 * 32;
 
-    private static final String BROKER_URL = "vm://localhost?broker.persistent=false";
+    private static final String BROKER_URL = "vm://0.0.0.0?broker.persistent=false";
 
     @Bean
     ConnectionFactory connectionFactory() throws Exception {
