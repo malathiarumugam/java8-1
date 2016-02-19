@@ -23,7 +23,7 @@ public class WebSocketClientConfig {
 
     @Bean
     public WebSocketConnectionManager webSocketConnectionManager(WebSocketClient webSocketClient, WebSocketHandler webSocketHandler) {
-        WebSocketConnectionManager manager = new WebSocketConnectionManager(webSocketClient, webSocketHandler, "ws://localhost:8080/spring4-java8-demo/echo");
+        WebSocketConnectionManager manager = new WebSocketConnectionManager(webSocketClient, webSocketHandler, "ws://0.0.0.0:8080/spring4-java8-demo/echo");
         manager.setAutoStartup(true);
         return manager;
     }
